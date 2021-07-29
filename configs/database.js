@@ -1,7 +1,15 @@
-module.exports = {
-    HOST: 'mongo',
-    MONGO_PORT: '27017',
-    DB: 'test?authSource=admin',
-    USERNAME: process.env.USERNAME,
-    PASSWORD: process.env.PASSWORD,
-}
+const { Sequelize } = require('sequelize');
+require('dotenv').config()
+
+const db = new Sequelize( {
+    database: process.env.DATABASE,
+    username: 'root',
+    password: process.env.PASSWORD,
+    host: process.env.HOST,
+    dialect: 'mysql',
+    ssl: false,
+    dialectOptions: {},
+    logging: false,
+});
+
+module.exports = db;

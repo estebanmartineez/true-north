@@ -1,3 +1,4 @@
+// Urls useful as a keu:value
 module.exports = {
-    HIPSUM_URI: 'https://hipsum.co/the-api/?type=hipster-centric&sentences=',
+
 }
